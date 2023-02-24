@@ -69,9 +69,9 @@ There a example a full character (in this example 'P') it will look like this :
 
 | BINARY	|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
-|Character	|  0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
-|MASK (I)	|  1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-|SEND SIGNAL|  X | X | X | X | X | X | X | X |
+|Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
+|MASK (I)	| 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+|SEND SIGNAL| X | X | X | X | X | X | X | X |
 
 `i++` (Shift bit the mask by one)
 
