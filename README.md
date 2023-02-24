@@ -76,7 +76,7 @@ else
 | 1 | + | 0 | = | 0 |
 | 1 | + | 1 | = | 1 |
 
-* the `>>` is the bit shifting on the right (`<<` is on the left), it shift all the bits by i on the right, and the least-significant bit is lost and a 0 is inserted on the other end.
+* the `>>` is the bit shifting on the right (`<<` is on the left), it shift all the bits by i, and the least-significant(s) bit(s) is lost and a 0 is inserted on the other end.
 ```
 1011 >> 1  →  0101
 1011 << 1  →  0110
