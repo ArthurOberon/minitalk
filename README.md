@@ -78,7 +78,7 @@ else
 
 ### For example
 
-There a example of the sending processus on a full character (in this example 'P'), it will look like this :
+There a example of the sending processus on a full character (in this example 'P') :
 
 |BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
@@ -150,8 +150,8 @@ There a example of the sending processus on a full character (in this example 'P
 |MASK (I)	| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
 |SEND SIGNAL|   |   |   |   |   |   |   | 0 |
 
-* After each bit send , the client wait a signal from the server before sending a new one.
-* After each bit receive, the server send a signal before to wait to receive a new one.
+* After each bit sended, the client wait a signal from the server before sending a new one.
+* After each bit received, the server send a signal before to wait to receive a new one.
 
 ## Server
 
