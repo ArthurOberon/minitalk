@@ -67,11 +67,19 @@ if (character & (0b10000000 >> i++))
 else
 	(kill(pid, SIGUSR1) 	// send 0
 ```
+* The `&` is a AND, the truth table is :
+| A | B | RESULT |
+|---|---|--------|
+| 0 | 0 |	0	 |
+| 0 | 1 |	0	 |
+| 1 | 0 |	0	 |
+| 1 | 1 |	1	 |
+
 ### For example
 
 There a example a full character (in this example 'P') it will look like this :
 
-| BINARY	|128|64 |32 |16 | 8 | 4 | 2 | 1 |
+|BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -79,7 +87,7 @@ There a example a full character (in this example 'P') it will look like this :
 
 `i++` (Shift bit the mask by one)
 
-| BINARY	|128|64 |32 |16 | 8 | 4 | 2 | 1 |
+|BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -87,7 +95,7 @@ There a example a full character (in this example 'P') it will look like this :
 
 `i++` (Shift bit the mask by one)
 
-| BINARY	|128|64 |32 |16 | 8 | 4 | 2 | 1 |
+|BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -95,7 +103,7 @@ There a example a full character (in this example 'P') it will look like this :
 
 `i++` (Shift bit the mask by one)
 
-| BINARY	|128|64 |32 |16 | 8 | 4 | 2 | 1 |
+|BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
@@ -103,7 +111,7 @@ There a example a full character (in this example 'P') it will look like this :
 
 `i++` (Shift bit the mask by one)
 
-| BINARY	|128|64 |32 |16 | 8 | 4 | 2 | 1 |
+|BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
@@ -111,7 +119,7 @@ There a example a full character (in this example 'P') it will look like this :
 
 `i++` (Shift bit the mask by one)
 
-| BINARY	|128|64 |32 |16 | 8 | 4 | 2 | 1 |
+|BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
@@ -119,7 +127,7 @@ There a example a full character (in this example 'P') it will look like this :
 
 `i++` (Shift bit the mask by one)
 
-| BINARY	|128|64 |32 |16 | 8 | 4 | 2 | 1 |
+|BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
@@ -127,7 +135,7 @@ There a example a full character (in this example 'P') it will look like this :
 
 `i++` (Shift bit the mask by one)
 
-| BINARY	|128|64 |32 |16 | 8 | 4 | 2 | 1 |
+|BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
@@ -135,7 +143,7 @@ There a example a full character (in this example 'P') it will look like this :
 
 `i++` (Shift bit the mask by one)
 
-| BINARY	|128|64 |32 |16 | 8 | 4 | 2 | 1 |
+|BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
