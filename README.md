@@ -55,13 +55,17 @@ make client
 
 ## Signal System
 
-* When the client or the server sending a signal, they can only use SIGUSR1 and SIGUSR2 -> (SIGUSR1 = 0 & SIGUSR2 = 1).
+* When the client or the server sending a signal, they can only use SIGUSR1 and SIGUSR2.
+```
+SIGUSR1 = 0
+SIGUSR2 = 1
+```
 * To send a character, it use shift bit and mask (of 8 bits) :
 ```
 if (character & (0b10000000 >> i++))
-	(kill(pid, SIGUSR2) // send 1
+	(kill(pid, SIGUSR2) 	// send 1
 else
-	(kill(pid, SIGUSR1) // send 0
+	(kill(pid, SIGUSR1) 	// send 0
 ```
 ### For example
 
@@ -71,7 +75,7 @@ There a example a full character (in this example 'P') it will look like this :
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-|SEND SIGNAL| X | X | X | X | X | X | X | X |
+|SEND SIGNAL| - | - | - | - | - | - | - | - |
 
 `i++` (Shift bit the mask by one)
 
@@ -157,7 +161,7 @@ sigaction(SIGUSR2, &sa, NULL);		// When receive a signal "SIGUSR2", use the vari
 
 * Then it receive the size of the message first, and malloc the gobal_variable at the size.
 
-* Then it receive character by character the message and then print it.
+* Then it receive character by character the message, and print it.
 
 ## Client
 
@@ -169,7 +173,7 @@ else
 	kill(pid, SIGUSR1)
 ```
 
-* Then it send the message himself, bits by bits (using the mask system explained above).
+* Then it send the message himself, characters by characters, bits by bits (using the mask system explained above).
 
 ### Author
 * **[Arthur Obéron](https://github.com/ArthurOberon)**
