@@ -78,7 +78,7 @@ else
 
 ### For example
 
-There a example a full character (in this example 'P') it will look like this :
+There a example of the sending processus on a full character (in this example 'P'), it will look like this :
 
 |BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
