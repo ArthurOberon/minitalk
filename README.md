@@ -75,7 +75,7 @@ There a example a full character (in this example 'P') it will look like this :
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-|SEND SIGNAL|  |  |  |  |  |  |  |  |
+|SEND SIGNAL|   |   |   |   |   |   |   |   |
 
 `i++` (Shift bit the mask by one)
 
@@ -83,7 +83,7 @@ There a example a full character (in this example 'P') it will look like this :
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-|SEND SIGNAL| 0 | X | X | X | X | X | X | X |
+|SEND SIGNAL| 0 |   |   |   |   |   |   |   |
 
 `i++` (Shift bit the mask by one)
 
@@ -91,7 +91,7 @@ There a example a full character (in this example 'P') it will look like this :
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
-|SEND SIGNAL| X | 1 | X | X | X | X | X | X |
+|SEND SIGNAL|   | 1 |   |   |   |   |   |   |
 
 `i++` (Shift bit the mask by one)
 
@@ -99,15 +99,15 @@ There a example a full character (in this example 'P') it will look like this :
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
-|SEND SIGNAL| X | X | 0 | X | X | X | X | X |
+|SEND SIGNAL|   |   | 0 |   |   |   |   |   |
 
 `i++` (Shift bit the mask by one)
 
 | BINARY	|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
-|Character	| 0 | 1 | 0 | 1  | 0 | 0 | 0 | 0 |
-|MASK (I)	| 0 | 0 | 0 | 1  | 0 | 0 | 0 | 0 |
-|SEND SIGNAL| X | X | X | 0  | X | X | X | X |
+|Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
+|MASK (I)	| 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+|SEND SIGNAL|   |   |   | 1 |   |   |   |   |
 
 `i++` (Shift bit the mask by one)
 
@@ -115,7 +115,7 @@ There a example a full character (in this example 'P') it will look like this :
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
-|SEND SIGNAL| X | X | X | X | 0 | X | X | X |
+|SEND SIGNAL|   |   |   |   | 0 |   |   |   |
 
 `i++` (Shift bit the mask by one)
 
@@ -123,7 +123,7 @@ There a example a full character (in this example 'P') it will look like this :
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-|SEND SIGNAL| X | X | X | X | X | 0 | X | X |
+|SEND SIGNAL|   |   |   |   |   | 0 |   |   |
 
 `i++` (Shift bit the mask by one)
 
@@ -131,7 +131,7 @@ There a example a full character (in this example 'P') it will look like this :
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
-|SEND SIGNAL| X | X | X | X | X | X | 0 | X |
+|SEND SIGNAL|   |   |   |   |   |   | 0 |   |
 
 `i++` (Shift bit the mask by one)
 
@@ -139,7 +139,7 @@ There a example a full character (in this example 'P') it will look like this :
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
-|SEND SIGNAL| X | X | X | X | X | X | X | 0 |
+|SEND SIGNAL|   |   |   |   |   |   |   | 0 |
 
 * After each bit send , the client wait a signal from the server before sending a new one.
 * After each bit receive, the server send a signal before to wait to receive a new one.
