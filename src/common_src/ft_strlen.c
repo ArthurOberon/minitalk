@@ -6,11 +6,11 @@
 /*   By: aoberon <aoberon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:54:22 by aoberon           #+#    #+#             */
-/*   Updated: 2023/02/24 17:55:25 by aoberon          ###   ########.fr       */
+/*   Updated: 2023/02/24 20:43:36 by aoberon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"minitalk.h"
+#include "minitalk.h"
 
 size_t	ft_strlen(const char *s)
 {

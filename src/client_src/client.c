@@ -6,7 +6,7 @@
 /*   By: aoberon <aoberon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 16:42:16 by aoberon           #+#    #+#             */
-/*   Updated: 2023/02/24 17:54:19 by aoberon          ###   ########.fr       */
+/*   Updated: 2023/02/24 22:17:10 by aoberon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,6 @@ void	client_int(char *pid_char, int size)
 		}
 	}
 }
-//SIGUSR1 = 0;
-//SIGUSR2 = 1;
 
 void	ft_simplified_print(char *str, char *pid)
 {
@@ -87,6 +85,9 @@ void	ft_simplified_print(char *str, char *pid)
 	ft_putstr(pid);
 	ft_putstr("...\n");
 }
+
+//SIGUSR1 = 0;
+//SIGUSR2 = 1;
 
 int	main(int argc, char **argv)
 {

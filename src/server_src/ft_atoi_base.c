@@ -6,11 +6,11 @@
 /*   By: aoberon <aoberon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 15:12:52 by aoberon           #+#    #+#             */
-/*   Updated: 2023/02/24 17:55:25 by aoberon          ###   ########.fr       */
+/*   Updated: 2023/02/24 20:43:36 by aoberon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"minitalk.h"
+#include "minitalk.h"
 
 static int	ft_inbase(char c, char *base)
 {

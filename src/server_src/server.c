@@ -6,11 +6,11 @@
 /*   By: aoberon <aoberon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 16:42:20 by aoberon           #+#    #+#             */
-/*   Updated: 2023/02/24 17:55:25 by aoberon          ###   ########.fr       */
+/*   Updated: 2023/02/24 23:05:33 by aoberon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"minitalk.h"
+#include "minitalk.h"
 
 char	*g_result;
 
@@ -77,6 +77,9 @@ void	handle_sig(int sig, siginfo_t *info, void *ucontext)
 		exit(EXIT_FAILURE);
 	}
 }
+
+//SIGUSR1 = 0;
+//SIGUSR2 = 1;
 
 int	main(void)
 {

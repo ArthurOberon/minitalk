@@ -6,11 +6,11 @@
 /*   By: aoberon <aoberon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:57:13 by aoberon           #+#    #+#             */
-/*   Updated: 2023/02/24 17:55:25 by aoberon          ###   ########.fr       */
+/*   Updated: 2023/02/24 20:43:36 by aoberon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"minitalk.h"
+#include "minitalk.h"
 
 int	ft_malloc(char **str, siginfo_t *info)
 {

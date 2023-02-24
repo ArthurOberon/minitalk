@@ -7,7 +7,7 @@ INCLUDES_DIR 	=	include/
 SRC_DIR 		=	src/
 OBJ_DIR 		=	obj/
 INCLUDES_H		=	-I./$(INCLUDES_DIR)
-DEPS 			=
+DEPS 			=	$(INCLUDES_DIR)minitalk.h
 
 COMMON_SRC		=	$(addprefix common_src/, \
 					ft_atoi.c \
@@ -53,14 +53,14 @@ all: 	$(SERVER) $(CLIENT)
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c $(DEPS)
 	@mkdir -p $(OBJ_DIR)
 	@mkdir -p $(dir $@)
-	@$(CC) $(CFLAGS) $(INCLUDES_H) -c -o $@ $^
+	@$(CC) $(CFLAGS) $(INCLUDES_H) -c -o $@ $<
 
-$(SERVER): $(SERVER_OBJ) $(DEPS)
+$(SERVER): $(SERVER_OBJ)
 	@echo "\e[36mMaking $(SERVER)...\e[0m"
 	@$(CC) $(CFLAGS) $(INCLUDES_H) $(SERVER_OBJ) -o $(SERVER)
 	@echo "\e[32mDone !\e[0m"
 
-$(CLIENT): $(CLIENT_OBJ) $(DEPS)
+$(CLIENT): $(CLIENT_OBJ)
 	@echo "\e[36mMaking $(CLIENT)...\e[0m"
 	@$(CC) $(CFLAGS) $(INCLUDES_H) $(CLIENT_OBJ) -o $(CLIENT)
 	@echo "\e[32mDone !\e[0m"
