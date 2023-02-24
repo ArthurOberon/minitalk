@@ -75,7 +75,7 @@ There a example a full character (in this example 'P') it will look like this :
 |-----------|---|---|---|---|---|---|---|---|
 |Character	| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 |MASK (I)	| 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-|SEND SIGNAL| - | - | - | - | - | - | - | - |
+|SEND SIGNAL|  |  |  |  |  |  |  |  |
 
 `i++` (Shift bit the mask by one)
 
