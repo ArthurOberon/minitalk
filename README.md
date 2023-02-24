@@ -93,7 +93,7 @@ There a example of the sending processus on a full character (in this example 'P
 |MASK (I)	| 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 |SEND SIGNAL|   |   |   |   |   |   |   |   |
 
-`i++` (Shift the mask by one bit)	
+Starting at `i = 0`.
 
 |BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
