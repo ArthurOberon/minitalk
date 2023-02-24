@@ -155,7 +155,7 @@ There a example of the sending processus on a full character (in this example 'P
 
 ## Server
 
-* At the start, the server get his pid if the function `getpid()` and print it :
+* At the start, the server get his pid with the function `getpid()` and print it :
 ```
 Welcome to the Minitalk server. Starting...
 Server Started ! You can send a message with the PID 3740619 !
