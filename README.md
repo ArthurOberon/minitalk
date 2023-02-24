@@ -67,7 +67,7 @@ if (character & (0b10000000 >> i++))
 else
 	(kill(pid, SIGUSR1) 	// send 0
 ```
-* The `&` is a `AND`, his truth table is :
+* The `&` is the binary operator `AND`, his truth table is :
 
 | A | B | Y |
 |---|---|---|
