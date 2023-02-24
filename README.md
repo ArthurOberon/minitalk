@@ -155,7 +155,7 @@ There a example of the sending processus on a full character (in this example 'P
 
 ## Server
 
-* At the start, the server get his pid with the function `getpid()` and print it :
+* At the start, the server get his pid with the function `getpid()`, and print it :
 ```
 Welcome to the Minitalk server. Starting...
 Server Started ! You can send a message with the PID 3740619 !
@@ -174,7 +174,7 @@ sigaction(SIGUSR2, &sa, NULL);		// When receive a signal "SIGUSR2", use the vari
 
 ## Client
 
-* At the start, the client, take the length of the message, and send it (with a mask of 32 bits) :
+* At the start, the client take the length of the message, and send it (with a mask of 32 bits) :
 ```
 if (size & (0b10000000000000000000000000000000 >> i++))
 	kill(pid, SIGUSR2)
@@ -182,7 +182,7 @@ else
 	kill(pid, SIGUSR1)
 ```
 
-* Then it send the message himself, characters by characters, bits by bits (using the mask system explained above).
+* Then it send the message himself, character by character, bit by bit (using the mask system explained above).
 
 ### Author
 * **[Arthur Obéron](https://github.com/ArthurOberon)**
