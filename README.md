@@ -55,7 +55,7 @@ make client
 
 ## Signal System
 
-* When the client or the server sending a signal, they can only use SIGUSR1 and SIGUSR2.
+* When the client or the server sending a signal, they can only use `SIGUSR1` and `SIGUSR2`.
 ```
 SIGUSR1 = 0
 SIGUSR2 = 1
@@ -76,7 +76,7 @@ else
 | 1 | + | 0 | = | 0 |
 | 1 | + | 1 | = | 1 |
 
-* the `>>` is the bit shifting on the right (`<<` is on the left), it shift all the bits by i, and the least-significant(s) bit(s) is lost and a 0 is inserted on the other end.
+* the `>>` is the bit shifting on the right (`<<` is on the left), it shift all the bits by `i`, and the least-significant(s) bit(s) is lost and a 0 is inserted on the other end.
 ```
 1011 >> 1  →  0101
 1011 << 1  →  0110
@@ -93,7 +93,7 @@ There a example of the sending processus on a full character (in this example 'P
 |MASK (I)	| 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 |SEND SIGNAL|   |   |   |   |   |   |   |   |
 
-`i++` (Shift bit the mask by one)
+`i++` (Shift the mask by one bit)
 
 |BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
@@ -101,7 +101,7 @@ There a example of the sending processus on a full character (in this example 'P
 |MASK (I)	| 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 |SEND SIGNAL| 0 |   |   |   |   |   |   |   |
 
-`i++` (Shift bit the mask by one)
+`i++` (Shift the mask by one bit)
 
 |BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
@@ -109,7 +109,7 @@ There a example of the sending processus on a full character (in this example 'P
 |MASK (I)	| 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
 |SEND SIGNAL|   | 1 |   |   |   |   |   |   |
 
-`i++` (Shift bit the mask by one)
+`i++` (Shift the mask by one bit)
 
 |BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
@@ -117,7 +117,7 @@ There a example of the sending processus on a full character (in this example 'P
 |MASK (I)	| 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
 |SEND SIGNAL|   |   | 0 |   |   |   |   |   |
 
-`i++` (Shift bit the mask by one)
+`i++` (Shift the mask by one bit)
 
 |BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
@@ -125,7 +125,7 @@ There a example of the sending processus on a full character (in this example 'P
 |MASK (I)	| 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 |SEND SIGNAL|   |   |   | 1 |   |   |   |   |
 
-`i++` (Shift bit the mask by one)
+`i++` (Shift the mask by one bit)
 
 |BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
@@ -133,7 +133,7 @@ There a example of the sending processus on a full character (in this example 'P
 |MASK (I)	| 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
 |SEND SIGNAL|   |   |   |   | 0 |   |   |   |
 
-`i++` (Shift bit the mask by one)
+`i++` (Shift the mask by one bit)
 
 |BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
@@ -141,7 +141,7 @@ There a example of the sending processus on a full character (in this example 'P
 |MASK (I)	| 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 |SEND SIGNAL|   |   |   |   |   | 0 |   |   |
 
-`i++` (Shift bit the mask by one)
+`i++` (Shift the mask by one bit)
 
 |BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
@@ -149,7 +149,7 @@ There a example of the sending processus on a full character (in this example 'P
 |MASK (I)	| 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
 |SEND SIGNAL|   |   |   |   |   |   | 0 |   |
 
-`i++` (Shift bit the mask by one)
+`i++` (Shift the mask by one bit)
 
 |BINARY		|128|64 |32 |16 | 8 | 4 | 2 | 1 |
 |-----------|---|---|---|---|---|---|---|---|
