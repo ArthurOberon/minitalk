@@ -60,7 +60,7 @@ make client
 SIGUSR1 = 0
 SIGUSR2 = 1
 ```
-* To send a character, it use shift bit and mask (of 8 bits) :
+* To send a character, it use bit shifting and mask (of 8 bits) :
 ```
 if (character & (0b10000000 >> i++))
 	(kill(pid, SIGUSR2) 	// send 1
@@ -75,6 +75,13 @@ else
 | 0 | + | 1 | = | 0 |
 | 1 | + | 0 | = | 0 |
 | 1 | + | 1 | = | 1 |
+
+* the `>>` is the bit shifting on the right (`<<` is on the left), it shift all the bits by i on the right, and the least-significant bit is lost and a 0 is inserted on the other end.
+```
+1011 >> 1  →  0101
+1011 << 1  →  0110
+101101 >> 3  →  000101
+```
 
 ### For example
 
