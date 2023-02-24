@@ -1,0 +1,14 @@
+name: Norminette
+run-name: ${{ github.actor }} is testing out Norminette 🐱
+on: [push]
+
+jobs:
+  norminette:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: hanshazairi/42-norminette-action@v1.1.0
+        # optional #
+        with:
+          exclude-dir: './checker_visu'
+        # optional #
