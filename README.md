@@ -67,13 +67,20 @@ if (character & (0b10000000 >> i++))
 else
 	(kill(pid, SIGUSR1) 	// send 0
 ```
-* The `&` is a AND, the truth table is :
+* The `&` is a AND, his truth table is :
+
 | A | B | RESULT |
 |---|---|--------|
 | 0 | 0 |	0	 |
 | 0 | 1 |	0	 |
 | 1 | 0 |	0	 |
 | 1 | 1 |	1	 |
+
+|A		| B | RESULT |
+|-------|---|--------|
+|Character	| 0 | 1 |
+|MASK (I)	| 1 | 0 |
+|SEND SIGNAL|   |   |
 
 ### For example
 
