@@ -191,6 +191,8 @@ else
 
 * Then it send the message himself, character by character, bit by bit (using the mask system explained above).
 
+---
+
 ### Author
 * **[Arthur Obéron](https://github.com/ArthurOberon)**
 
