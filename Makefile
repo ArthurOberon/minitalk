@@ -1,7 +1,7 @@
 SERVER = server
 CLIENT = client
 
-CC 				=	gcc
+CC 				=	cc
 CFLAGS 			=	-Wall -Wextra -Werror
 INCLUDES_DIR 	=	include/
 SRC_DIR 		=	src/
