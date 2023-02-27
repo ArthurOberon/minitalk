@@ -6,7 +6,7 @@
 /*   By: aoberon <aoberon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:57:13 by aoberon           #+#    #+#             */
-/*   Updated: 2023/02/24 20:43:36 by aoberon          ###   ########.fr       */
+/*   Updated: 2023/02/27 15:15:39 by aoberon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	ft_malloc(char **str, siginfo_t *info)
 		if (kill(info->si_pid, SIGUSR2) == -1)
 		{
 			ft_putstr("Unable to send error to the client.\n");
-			exit(EXIT_FAILURE);
 		}
 		exit(EXIT_FAILURE);
 	}

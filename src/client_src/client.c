@@ -6,7 +6,7 @@
 /*   By: aoberon <aoberon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 16:42:16 by aoberon           #+#    #+#             */
-/*   Updated: 2023/02/24 22:17:10 by aoberon          ###   ########.fr       */
+/*   Updated: 2023/02/27 15:15:54 by aoberon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	handle_sig_receive(int sig)
 {
 	if (sig == SIGUSR1)
 		g_discuss = 1;
-	if (sig == SIGUSR2)
+	else if (sig == SIGUSR2)
 	{
 		ft_putstr("The server detected an error during message's reception.\n");
 		exit(EXIT_FAILURE);
@@ -46,7 +46,7 @@ void	client(char *pid_char, char character)
 				ft_error();
 		}
 		while (g_discuss == 0)
-			pause();
+			;
 	}
 }
 
@@ -73,9 +73,7 @@ void	client_int(char *pid_char, int size)
 				ft_error();
 		}
 		while (g_discuss == 0)
-		{
-			pause();
-		}
+			;
 	}
 }
 
@@ -111,7 +109,7 @@ int	main(int argc, char **argv)
 	{
 		client(argv[1], argv[2][i++]);
 		while (g_discuss == 0)
-			pause();
+			;
 	}
 	ft_putstr("The whole message was received by the server !\n");
 	return (0);
