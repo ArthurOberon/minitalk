@@ -6,7 +6,7 @@
 /*   By: aoberon <aoberon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 16:42:20 by aoberon           #+#    #+#             */
-/*   Updated: 2023/02/28 14:29:27 by aoberon          ###   ########.fr       */
+/*   Updated: 2023/02/28 14:34:06 by aoberon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,10 +86,6 @@ int	main(void)
 	struct sigaction	sa;
 
 	ft_putstr("Welcome to the Minitalk server. Starting...\n");
-	// g_message = malloc(sizeof(char) * 33);
-	// if (!g_message)
-	// 	return (1);
-	// ft_bzero(g_message, 33);
 	sigemptyset(&sa.sa_mask);
 	sa.sa_flags = SA_SIGINFO;
 	sa.sa_sigaction = &handle_sig;
