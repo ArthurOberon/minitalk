@@ -6,7 +6,7 @@
 /*   By: aoberon <aoberon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 16:42:20 by aoberon           #+#    #+#             */
-/*   Updated: 2023/02/28 14:08:37 by aoberon          ###   ########.fr       */
+/*   Updated: 2023/02/28 14:29:27 by aoberon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static void	ft_receive_character(int *status, int sig, siginfo_t *info)
 
 static void	handle_sig(int sig, siginfo_t *info, void *ucontext)
 {
-	static int	status = RECEIVE_SIZE;
+	static int	status = INITIALIZE_MESSAGE;
 
 	(void)ucontext;
 	if (status == INITIALIZE_MESSAGE)
@@ -86,10 +86,10 @@ int	main(void)
 	struct sigaction	sa;
 
 	ft_putstr("Welcome to the Minitalk server. Starting...\n");
-	g_message = malloc(sizeof(char) * 33);
-	if (!g_message)
-		return (1);
-	ft_bzero(g_message, 33);
+	// g_message = malloc(sizeof(char) * 33);
+	// if (!g_message)
+	// 	return (1);
+	// ft_bzero(g_message, 33);
 	sigemptyset(&sa.sa_mask);
 	sa.sa_flags = SA_SIGINFO;
 	sa.sa_sigaction = &handle_sig;
