@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat_int.c                                    :+:      :+:    :+:   */
+/*   ft_strcat_character.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aoberon <aoberon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:09:03 by aoberon           #+#    #+#             */
-/*   Updated: 2023/02/24 20:43:36 by aoberon          ###   ########.fr       */
+/*   Updated: 2023/02/28 14:20:36 by aoberon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <stdio.h>
 
-char	ft_strcat_int(char *dst, const char c)
+char	ft_strcat_character(char *dst, const char c)
 {
 	size_t			length;
 

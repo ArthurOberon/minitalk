@@ -25,7 +25,7 @@ SERVER_SRC 		= 	$(addprefix server_src/, \
 					ft_malloc.c \
 					ft_get_pid.c \
 					ft_atoi_base.c \
-					ft_strcat_int.c \
+					ft_strcat_character.c \
 					ft_print_and_reset.c \
 					ft_strcat_without_end.c \
 					)

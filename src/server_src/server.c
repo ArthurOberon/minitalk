@@ -6,7 +6,7 @@
 /*   By: aoberon <aoberon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 16:42:20 by aoberon           #+#    #+#             */
-/*   Updated: 2023/02/28 13:33:47 by aoberon          ###   ########.fr       */
+/*   Updated: 2023/02/28 14:08:37 by aoberon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ static void	ft_receive_size(int *status, int sig, siginfo_t *info)
 		ft_strcat_without_end(g_message, "1");
 	if (g_message[31] != '\0')
 	{
-		*status = RECEIVE_CHARACTER;
 		size = ft_malloc(&g_message, info);
 		ft_bzero(g_message, size + 1);
+		*status = RECEIVE_CHARACTER;
 	}
 }
 
@@ -54,7 +54,7 @@ static void	ft_receive_character(int *status, int sig, siginfo_t *info)
 		ft_strcat(octet, "1");
 	if (ft_strlen(octet) == 8)
 	{
-		if (ft_strcat_int(g_message, ft_atoi_base(octet, "01")) == '\0')
+		if (ft_strcat_character(g_message, ft_atoi_base(octet, "01")) == '\0')
 			ft_print_and_reset(g_message, info, status);
 		ft_bzero(octet, 9);
 	}
