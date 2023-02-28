@@ -6,17 +6,21 @@
 /*   By: aoberon <aoberon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 16:42:31 by aoberon           #+#    #+#             */
-/*   Updated: 2023/02/24 20:02:43 by aoberon          ###   ########.fr       */
+/*   Updated: 2023/02/28 13:25:00 by aoberon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINITALK_H
 # define MINITALK_H
 
-// # define _XOPEN_SOURCE 700
+# define _XOPEN_SOURCE 700
 # include <unistd.h>
 # include <stdlib.h>
 # include <signal.h>
+
+# define INITIALIZE_MESSAGE 0
+# define RECEIVE_SIZE 1
+# define RECEIVE_CHARACTER 2
 
 int		ft_nbrlen(long nb);
 int		ft_isspace(char c);

@@ -6,7 +6,7 @@
 /*   By: aoberon <aoberon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 16:42:16 by aoberon           #+#    #+#             */
-/*   Updated: 2023/02/27 15:15:54 by aoberon          ###   ########.fr       */
+/*   Updated: 2023/02/28 13:34:17 by aoberon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	g_discuss = 0;
 
-void	handle_sig_receive(int sig)
+static void	handle_sig(int sig)
 {
 	if (sig == SIGUSR1)
 		g_discuss = 1;
@@ -25,7 +25,7 @@ void	handle_sig_receive(int sig)
 	}
 }
 
-void	client(char *pid_char, char character)
+static void	ft_send_character(char *pid_char, char character)
 {
 	int		i;
 	int		pid;
@@ -50,7 +50,7 @@ void	client(char *pid_char, char character)
 	}
 }
 
-void	client_int(char *pid_char, int size)
+static void	ft_send_size(char *pid_char, int size)
 {
 	int		i;
 	int		pid;
@@ -77,7 +77,7 @@ void	client_int(char *pid_char, int size)
 	}
 }
 
-void	ft_simplified_print(char *str, char *pid)
+static void	ft_simplified_print(char *str, char *pid)
 {
 	ft_putstr(str);
 	ft_putstr(pid);
@@ -95,7 +95,7 @@ int	main(int argc, char **argv)
 
 	sigemptyset(&sa.sa_mask);
 	sa.sa_flags = SA_RESTART;
-	sa.sa_handler = &handle_sig_receive;
+	sa.sa_handler = &handle_sig;
 	sigaction(SIGUSR1, &sa, NULL);
 	sigaction(SIGUSR2, &sa, NULL);
 	i = 0;
@@ -103,11 +103,11 @@ int	main(int argc, char **argv)
 		return (ft_putstr("Too few or too many arguments\n"), 1);
 	ft_simplified_print("Sending the size of the message to ", argv[1]);
 	length = ft_strlen(argv[2]);
-	client_int(argv[1], length);
+	ft_send_size(argv[1], length);
 	ft_simplified_print("Sending the message to ", argv[1]);
 	while (i <= length)
 	{
-		client(argv[1], argv[2][i++]);
+		ft_send_character(argv[1], argv[2][i++]);
 		while (g_discuss == 0)
 			;
 	}

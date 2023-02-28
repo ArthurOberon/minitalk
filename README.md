@@ -1,4 +1,4 @@
-![Norminette](https://github.com/ArthurOberon/minitalk/actions/workflows/norminette.yml/badge.svg) ![Makefile](https://github.com/ArthurOberon/minitalk727499/actions/workflows/makefile.yml/badge.svg)
+![Norminette](https://github.com/ArthurOberon/minitalk/actions/workflows/norminette.yml/badge.svg) ![Makefile](https://github.com/ArthurOberon/minitalk/actions/workflows/makefile.yml/badge.svg)
 
 ---
 
