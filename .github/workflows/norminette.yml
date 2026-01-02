@@ -8,7 +8,3 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: alexandregv/norminette-action@v3
-        # optional #
-        with:
-          exclude-dir: ''
-        # optional #
