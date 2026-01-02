@@ -191,12 +191,3 @@ else
 
 * Then it send the message himself, character by character, bit by bit (using the mask system explained above).
 
----
-
-### Author
-* **[Arthur Obéron](https://github.com/ArthurOberon)**
-
-### Thanks to :
-* **Johanne Vigny**
-* **[Quentin Thierry](https://github.com/QuentinThierry/)**
-* **Alex Cardona**
