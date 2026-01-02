@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: hanshazairi/42-norminette-action@v3
+      - uses: alexandregv/norminette-action@v3
         # optional #
         with:
           exclude-dir: ''
